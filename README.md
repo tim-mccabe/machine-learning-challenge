@@ -2,37 +2,15 @@
 
 ![exoplanets.jpg](Images/exoplanets.jpg)
 
-### Before You Begin
-
-1. Create a new repository for this project called `machine-learning-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Give each model you choose their own Jupyter notebook, **do not use more than one model per notebook.**
-
-4. Save your best model to a file. This will be the model used to test your accuracy and used for grading.
-
-5. Commit your Jupyter notebooks and model file and push them to GitHub.
-
-## Note
-
-Keep in mind that this homework is optional! However, you will gain a much greater understanding of testing and tuning different Classification models if you do complete it.
-
 ## Background
 
 Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
 
 To help process this data, you will create machine learning models capable of classifying candidate exoplanets from the raw dataset.
 
-In this homework assignment, you will need to:
-
-1. [Preprocess the raw data](#Preprocessing)
-2. [Tune the models](#Tune-Model-Parameters)
-3. [Compare two or more models](#Evaluate-Model-Performance)
-
 - - -
 
-## Instructions
+## Project Outline
 
 ### Preprocess the Data
 
@@ -64,26 +42,26 @@ In this homework assignment, you will need to:
 
 - - -
 
-## Hints and Considerations
+## Report and Final Model Outcome:
 
-* Start by cleaning the data, removing unnecessary columns, and scaling the data.
+### SVM (Support Vector Machine)
 
-* Not all variables are significant be sure to remove any insignificant variables.
+* The first model run on the data was an SVM (support-vector machines), which was fairly accurate in detrmining the outcome. However, it is important to train and test multiple models to insure reliability and accuracy.  The next model the data was fit to was Random forest.
 
-* Make sure your `sklearn` package is up to date.
+  |               | BeforeCV      | AfterCV       |
+  |:-------------:|:-------------:|:-------------:|
+  |Training Score | 0.846         | 0.887         |
+  |Testing Score  | 0.842         | 0.879         |
+  
+### Random Forest
 
-* Try a simple model first, and then tune the model using `GridSearch`.
+*Random Forest was fairly accurate, even before hyperparameter tuning. Random forests are much simpler to train for a practitioner; it’s easier to find a good, robust model. The complexity of a random forest grows with the number of trees in the forest, and the number of training samples we have. In SVMs, we typically need to do a fair amount of parameter tuning, and in addition to that, the computational cost grows linearly with the number of classes as well.
 
-- - -
+  |               | BeforeCV      | AfterCV       |
+  |:-------------:|:-------------:|:-------------:|
+  |Training Score | 0.995         | 1.0           |
+  |Testing Score  | 0.883         | 0.899         |
 
-## Submission
+  ![randomforest_classificationreport.jpg](starter_code/randomforest_classificationreport.jpg)
 
-* Create a Jupyter Notebook for each model and host the notebooks on GitHub.
-
-* Create a file for your best model and push to GitHub
-
-* Include a README.md file that summarizes your assumptions and findings.
-
-* Submit the link to your GitHub project to Bootcamp Spot.
-
-##### © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+  ![featureimportance.jpg](starter_code/featureimportance.jpg)
