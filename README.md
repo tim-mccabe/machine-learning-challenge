@@ -62,6 +62,6 @@ To help process this data, you will create machine learning models capable of cl
   |Training Score | 0.995         | 1.0           |
   |Testing Score  | 0.883         | 0.899         |
 
-  ![randomforest_classificationreport.jpg](starter_code/randomforest_classificationreport.jpg)
+![randomforest_classificationreport.png](starter_code/randomforest_classificationreport.png)
 
-  ![featureimportance.jpg](starter_code/featureimportance.jpg)
+  ![featureimportance.png](starter_code/featureimportance.png)
